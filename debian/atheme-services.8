@@ -1,0 +1,55 @@
+.TH ATHEME\-SERVICES 8 "November 2007"
+.SH NAME
+atheme\-services \- a modular IRC services daemon
+.SH SYNOPSIS
+.B atheme\-services
+\&\fR[\fB\-dhnv\fR] [\fB\-c\fR \fIconf\fR] [\fB\-l\fR \fIlogfile\fR] [\fB\-p\fR \fIpidfile\fR]
+.br
+.SH DESCRIPTION
+This manual page documents the
+.B atheme\-services
+command.
+.PP
+\fBatheme\-services\fP is an IRC Services implementation, which connects to an IRC server and
+provides services such as NickServ and ChanServ to users, allowing them to register their
+nicknames and channels.
+.SH OPTIONS
+\fBatheme\-services\fR accepts the following command line options:
+.TP
+.B \-c \fIconf\fR
+Specifies an alternate config file for the daemon to load.
+.TP
+.B \-d
+Starts in debugging mode.
+.TP
+.B \-h
+Prints the help message and exits.
+.TP
+.B \-l \fIlogfile\fR
+Specifies the log file.
+.TP
+.B \-n
+Doesn't fork into the background, logs messages to stdout as well as the logfile.
+.TP
+.B \-p \fIpidfile\fR
+Specifies the pid file.
+.TP
+.B \-v
+Prints the version information and exits.
+.SH AUTHOR
+atheme\-services was primarly written by:
+.PP
+.RS 4
+.nf
+William Pitcock <nenolod \-at\- nenolod.net>
+Michael Tharp <gxti \-at\- partiallystapled.com>
+Jilles Tjoelker <jilles \-at\- stack.nl>
+Pippijn van Steenhoven <pippijn \-at\- one09.net>
+Robin Burchell <w00t \-at\- staff.chatspike.net>
+.fi
+.RE
+.PP
+This manual page was originally written by Bradley Smith <brad@brad\-smith.co.uk>,
+for the Debian project (but may be used by others).
+.PP
+This manual page was later revised by William Pitcock <nenolod@sacredspiral.co.uk>.

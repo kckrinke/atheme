@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# atheme
+# Version:	atheme-2.2.0  06/08/07
+# Author:	Bradley Smith <brad@brad-smith.co.uk>
+
+set -e
+
+case "$1" in
+    purge)
+	rm -rf /etc/atheme
+        rm -rf /var/run/atheme
+        rm -rf /var/lib/atheme
+        rm -rf /var/log/atheme
+    ;;
+
+esac
+
+#DEBHELPER#
+
+exit 0

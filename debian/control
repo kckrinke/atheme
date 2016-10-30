@@ -1,0 +1,21 @@
+Source: atheme-services
+Section: net
+Priority: optional
+Maintainer: Kevin C. Krinke <kevin@krinke.ca>
+Build-Depends: dpkg-dev (>= 1.16.0), debhelper (>= 9), autotools-dev, dh-autoreconf, libssl-dev, gettext, libmowgli-dev (>= 0.7), pkg-config
+Standards-Version: 3.9.5
+Homepage: http://atheme.net/
+
+Package: atheme-services
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Enhances: ircd
+Description: modular IRC services daemon
+ atheme-services is a portable, secure set of open source, modular IRC
+ services, designed to run on many IRC server implementations.
+ .
+ Unlike alternative packages, atheme-services' core is minimalistic,
+ providing only core functionality. atheme-services is a complete services
+ set, excluding features designed for oper abuse.
+ .
+ (Unofficial debian package by Kevin C. Krinke <kevin@krinke.ca>)

@@ -1,0 +1,285 @@
+This package was debianized by William Pitcock <nenolod@sacredspiral.co.uk>
+on Wed, 21 Nov 2007 19:52:19 -0600.
+
+This package was re-debianized by Mike Mestnik <cheako+apt_repo@mikemestnik.net>
+on Sat, 17 Mar 2012 17:53:47 -0600
+
+It was downloaded from <http://www.atheme.net/download-atheme.php>
+
+Upstream Authors: William Pitcock <nenolod@sacredspiral.co.uk>,
+  Jilles Tjoelker <jilles@stack.nl>,
+  Pippijn van Steenhoven <pippijn@one09.net>,
+  Michael Tharp <gxti@partiallystapled.com>,
+  Robin Burchell <w00t@staff.chatspike.net>
+
+Copyright:
+
+  For all other than those listed below:
+
+    Copyright (c) 2005-2007 Atheme Development Group (atheme.org)
+    Copyright (c) 2005-2010 Atheme Project (http://www.atheme.org)
+
+  contrib/gen_listenerdemo.c, contrib/ircd_catserv.c, contrib/os_pingspam.c,
+  include/balloc.h, include/channels.h, include/commandtree.h,
+  include/confparse.h, include/dlink.h, include/hook.h, include/i18n.h,
+  include/linker.h, include/metadata.h, include/module.h, include/news.h,
+  include/phandler.h, include/pmodule.h, include/servers.h,
+  include/services.h, include/servtree.h, include/stdinc.h,
+  include/uplink.h, include/users.h, src/linker.c,
+  All in include/protocol/, other than inspircd.h,
+  modules/chanserv/akick.c, modules/chanserv/ban.c,
+  modules/chanserv/clear_bans.c, modules/chanserv/clear.c,
+  modules/chanserv/clear_users.c, modules/chanserv/drop.c,
+  modules/chanserv/ftransfer.c, modules/chanserv/getkey.c,
+  modules/chanserv/halfop.c, modules/chanserv/info.c,
+  modules/chanserv/invite.c, modules/chanserv/kick.c,
+  modules/chanserv/mark.c, modules/chanserv/op.c,
+  modules/chanserv/quiet.c, modules/chanserv/recover.c,
+  modules/chanserv/register.c, modules/chanserv/status.c
+  modules/chanserv/taxonomy.c, modules/chanserv/topic.c,
+  modules/chanserv/voice.c, modules/nickserv/drop.c,
+  modules/nickserv/help.c, modules/nickserv/listmail.c,
+  modules/nickserv/logout.c, modules/nickserv/mark.c,
+  modules/nickserv/register.c, modules/nickserv/sendpass.c,
+  modules/nickserv/status.c, modules/nickserv/taxonomy.c,
+  modules/nickserv/vhost.c, contrib/cs_kickdots.c,
+  contrib/gen_echoserver.c, contrib/ircd_loveserv.c,
+  include/dictionary.h, src/dictionary.c, modules/nickserv/set.c,
+  modules/gameserv/gen_namegen_tab.pl, contrib/gen_vhostonreg.c,
+  contrib/os_logonnews.c, src/culture.c,
+  src/poll.c, modules/chanserv/fflags.c, modules/chanserv/why.c,
+  modules/gameserv/eightball.c, modules/gameserv/namegen.c,
+  modules/gameserv/rps.c, modules/nickserv/identify.c,
+  modules/nickserv/info.c, modules/operserv/jupe.c,
+  modules/operserv/mode.c, modules/operserv/modlist.c,
+  modules/operserv/modload.c, modules/operserv/modrestart.c,
+  modules/operserv/modunload.c, modules/operserv/noop.c,
+  modules/protocol/asuka.c, modules/protocol/bircd.c,
+  modules/protocol/hyperion.c, modules/protocol/ircnet.c,
+  modules/protocol/nefarious.c, modules/protocol/undernet.c,
+  contrib/ns_fregister.c, include/flags.h, modules/chanserv/flags.c,
+  modules/nickserv/ghost.c, include/object.h, include/table.h,
+  src/logger.c, src/object.c, src/table.c:
+
+    Copyright (c) 2005, 2006, 2007 William Pitcock
+
+  modules/nickserv/resetpass.c, modules/operserv/ignore.c,
+  modules/nickserv/freeze.c, modules/chanserv/count.c,
+  modules/operserv/specs.c, modules/operserv/uptime.c:
+
+    Copyright (c) 2005, 2006, 2007 Patrick Fish
+
+  modules/chanserv/list.c. modules/nickserv/list.c,
+  modules/operserv/clearchan.c, modules/operserv/compare.c,
+  modules/operserv/rakill.c, modules/operserv/rmatch.c,
+  modules/operserv/rnc.c:
+
+    Copyright (c) 2005, 2006, 2007 Robin Burchell
+
+  contrib/cs_userinfo.c, contrib/ns_ratelimitreg.c,
+  contrib/gen_httpd.c, contrib/gen_regcheckemail.c,
+  contrib/ircd_nohalfops.c, contrib/ircd_noowner.c,
+  contrib/ircd_noprotect.c, contrib/os_testcmd.c,
+  tools/html_helpfiles.sh, modules/nickserv/group.c.
+  contrib/hybservtoatheme.pl, include/privs.h, include/template.h,
+  src/privs.c, modules/chanserv/template.c, modules/xmlrpc/main.c:
+
+    Copyright (c) 2005, 2006, 2007 Jilles Tjoelker
+
+  contrib/ircd_alis.c:
+
+    Copyright (c) 2005-2007 William Pitcock
+    Copyright (C) 2003-2007 Lee Hardy <leeh@leeh.co.uk>
+    Copyright (C) 2003-2007 ircd-ratbox development team
+
+  contrib/Makefile.in, include/atheme.h, modules/backend/Makefile.in,
+  modules/chanserv/help.c, modules/chanserv/Makefile.in,
+  modules/Makefile.in, modules/chanserv/set.c, modules/crypto/Makefile.in,
+  modules/gameserv/Makefile.in, modules/global/Makefile.in,
+  modules/memoserv/Makefile.in, modules/nickserv/Makefile.in,
+  modules/operserv/Makefile.in, modules/protocol/Makefile.in,
+  modules/saslserv/Makefile.in, modules/xmlrpc/Makefile.in:
+
+    Copyright (c) 2003-2004 E. Will
+
+  contrib/ns_generatepass.c:
+
+    Copyright (c) 2005 Greg Feigenson
+
+  contrib/wumpus.c:
+
+    Copyright (c) 2006 William Pitcock <nenolod -at- nenolod.net>
+    Portions copyright (c) 2006 Kiyoshi Aman <kiyoshi.aman -at- gmail.com>
+
+  contrib/xmlrpc_explorer.php, modules/nickserv/return.c:
+
+    Copyright (c) 2005 Alex Lambert <alambert at quickfire dot org>
+
+  include/base64.h:
+
+    Copyright (C) 2004, 2005 Free Software Foundation, Inc.
+
+  src/base64.c:
+
+    Copyright (C) 1999, 2000, 2001, 2004, 2005 Free Software Foundation, Inc.
+
+  include/global.h, include/match.h, include/tools.h,
+  modules/operserv/akill.c, modules/operserv/help.c,
+  modules/operserv/inject.c, modules/protocol/bahamut.c,
+  modules/protocol/charybdis.c, modules/protocol/dreamforge.c,
+  modules/protocol/officeirc.c, modules/protocol/plexus.c,
+  modules/protocol/ptlink.c, modules/protocol/ratbox.c,
+  modules/protocol/shadowircd.c, modules/protocol/sorcery.c,
+  modules/protocol/ultimate3.c, modules/protocol/unreal.c:
+
+    Copyright (C) 2003-2004 E. Will.
+    Copyright (C) 2005-2006 Atheme Development Group
+
+  include/xmlrpc.h:
+
+    Copyright (c) 2005 Atheme Development Group and
+    Trystan Scott Lee <trystan@nomadirc.net>
+
+  src/xmlrpc.c:
+
+    Copyright (C) 2005 Trystan Scott Lee
+
+  src/arc4random.c:
+
+    Copyright 1996 David Mazieres <dm@lcs.mit.edu>.
+
+  src/cidr.c:
+
+    Copyright (c) 1996-2002 Hybrid Development Team
+    Copyright (c) 2002-2005 ircd-ratbox development team
+    Copyright (c) 2006 Atheme Development Group
+
+  modules/crypto/sorservices.c:
+
+    Copyright (c) 2006 William Pitcock <nenolod -at- nenolod.net>
+    Portions copyright (c) 2001 James Hess <mysidia -at- sorcery.net>
+
+  modules/gameserv/dice.c:
+
+    Copyright (c) 2005-2007 William Pitcock <nenolod@nenolod.net>
+    Copyright (c) 2006-2007 Jilles Tjoelker <jilles@stack.nl>
+
+  src/md5.c, include/md5.h:
+
+    Copyright (C) 1999, 2000, 2002 Aladdin Enterprises.  All rights reserved.
+
+License:
+
+  For all other than those listed below:
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+    ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+    WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+    ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+    LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+    ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  contrib/cap_sasl.pl:
+
+    This program is free software; you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by the
+    Free Software Foundation; either version 2 of the License, or (at your
+    option) any later version.
+
+    This program is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301,
+    USA.
+
+    On Debian and Ubuntu systems, the complete text of the GNU General
+    Public License is available at `/usr/share/common-licenses/GPL-1'.
+
+  include/base64.h, src/base64.c:
+
+    This program is free software; you can redistribute it and/or modify it
+    under the terms of the GNU Lesser General Public License as published
+    by the Free Software Foundation; either version 2.1, or (at your
+    option) any later version.
+
+    This program is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+    MA 02110-1301, USA.
+
+    On Debian and Ubuntu systems, the complete text of the GNU Lesser General
+    Public License is available at `/usr/share/common-licenses/LGPL-2.1'.
+
+  contrib/hybservtoatheme.pl:
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are
+    met:
+
+      1. Redistributions of source code must retain the above copyright
+         notice, this list of conditions and the following disclaimer.
+
+      2. Redistributions in binary form must reproduce the above copyright
+         notice, this list of conditions and the following disclaimer in
+         the documentation and/or other materials provided with the
+         distribution.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+    IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+    TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+    PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+    OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+    SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+    TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+    PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+    LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+    NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  src/arc4random.c:
+
+    Modification and redistribution in source and binary forms is permitted
+    provided that due credit is given to the author and the OpenBSD project
+    (for instance by leaving this copyright notice intact).
+
+  src/md5.c, include/md5.h:
+
+    This software is provided 'as-is', without any express or implied
+    warranty.  In no event will the authors be held liable for any damages
+    arising from the use of this software.
+
+    Permission is granted to anyone to use this software for any purpose,
+    including commercial applications, and to alter it and redistribute it
+    freely, subject to the following restrictions:
+
+     1. The origin of this software must not be misrepresented; you must not
+        claim that you wrote the original software. If you use this software
+        in a product, an acknowledgment in the product documentation would
+        be appreciated but is not required.
+
+     2. Altered source versions must be plainly marked as such, and must not
+        be misrepresented as being the original software.
+
+     3. This notice may not be removed or altered from any source
+        distribution.
+
+The Debian packaging is copyright (C) 2007, William Pitcock <nenolod@sacredspiral.co.uk> and
+	copyright (C) 2012, Mike Mestnik <cheako+apt_repo@mikemestnik.net> and
+is licensed under the GPL, see `/usr/share/common-licenses/GPL-2'.

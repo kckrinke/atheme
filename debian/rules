@@ -1,0 +1,59 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# To enable all hardening options, uncomment following line
+# export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic -D_FORTIFY_SOURCE=2
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@ --with autotools_dev
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-fhs-paths \
+        --disable-rpath --prefix=/ --exec-prefix=/usr \
+        --datarootdir=/usr/share --sysconfdir=/etc/atheme \
+        --bindir=/usr/sbin --includedir=/usr/include \
+        --docdir=/usr/share/doc/atheme-services/
+
+override_dh_auto_clean: 
+	[ ! -f buildsys.mk ] || make clean
+	# Manually remove files, due to authors distclean not safe
+	find -name .deps -type f -delete
+	[ ! -f buildsys.mk ] || rm buildsys.mk
+	[ ! -f config.sub ] || rm config.sub
+	[ ! -f config.guess ] || rm config.guess
+	[ ! -f config.log ] || rm config.log
+	[ ! -f config.status ] || rm config.status
+	[ ! -f dist/atheme.conf.operserv-example ] || rm dist/atheme.conf.operserv-example
+	[ ! -f dist/atheme.conf.userserv-example ] || rm dist/atheme.conf.userserv-example
+	[ ! -f extra.mk ] || rm extra.mk
+	[ ! -f include/sysconf.h ] || rm include/sysconf.h
+
+override_dh_auto_install:
+	dh_auto_install
+
+	cp $(CURDIR)/debian/atheme-services.default $(CURDIR)/debian/atheme-services/etc/default/atheme-services
+
+	# Install NEWS.md as upstream changelog and the Debian changelog.
+	< $(CURDIR)/NEWS.md gzip -9 > $(CURDIR)/debian/atheme-services/usr/share/doc/atheme-services/changelog.gz
+	< $(CURDIR)/debian/changelog gzip -9 > $(CURDIR)/debian/atheme-services/usr/share/doc/atheme-services/changelog.Debian.gz
+
+	# Croak if there is files created by the embedded code.
+	[ ! -d $(CURDIR)/debian/atheme-services/usr/include/libmowgli -a \
+	  ! -f $(CURDIR)/debian/atheme-services/usr/lib/libmowgli.so ]
+
+	# atheme-services allows wide configure latitude, so we want to make sure the user
+	# reads the config files...
+	rm -f $(CURDIR)/debian/atheme-services/etc/atheme/*
+
+	# shut lintian up by not installing the LICENSE...
+	rm -f $(CURDIR)/debian/atheme-services/usr/share/doc/atheme-services/LICENSE
+	rm -f $(CURDIR)/debian/atheme-services/usr/share/doc/atheme/LICENSE
+
+	# shut lintian up by removing the run folder.
+	rm -rf $(CURDIR)/debian/atheme-services/var/run
+

@@ -1,0 +1,97 @@
+atheme-services (7.2.7-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Kevin C. Krinke <kevin@krinke.ca>  Sat, 29 Oct 2016 19:57:37 -0400
+
+atheme-services (6.0.11-2+deb8u1) jessie-security; urgency=high
+
+  * add patch to fix CVE-2016-4478
+
+ -- Antoine Beaupré <anarcat@debian.org>  Tue, 03 May 2016 12:33:43 -0400
+
+atheme-services (6.0.11-2) unstable; urgency=medium
+
+  [ Antoine Beaupré ]
+  * Add README.source to explain how the underlay feature works
+  * Fix watch file, www.atheme.net doesn't seem to resolve
+  * Fix lintian warning: include init-functions in init.d
+  * Update to standards 3.9.5
+  * Fix logrotate.d script, thanks Graham Dunn (Closes: #746784)
+  * Bug fix: "URL borken", thanks to Christoph Biedl (Closes: #747390)
+
+  [Mike Mestnik]
+  * fix init.d status using status_of_proc (Closes: #737882)
+
+ -- Antoine Beaupré <anarcat@debian.org>  Mon, 07 Jul 2014 23:53:23 -0400
+
+atheme-services (6.0.11-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove stale lockfiles in startup script
+  * Switch to git version control
+  * Make me and Micah Anderson the uploaders instead of the too generic
+    irc maintainers
+  * Upload into unstable (Closes: #646607)
+  * Use simpler debian/rules using "dh9" rules
+  * This also enables hardening flags
+
+ -- Antoine Beaupré <anarcat@debian.org>  Sat, 09 Jun 2012 17:43:54 -0300
+
+atheme-services (6.0.10-1) unstable; urgency=low
+
+  *  New upstream release
+  *  New Maintainer: Mike Mestnik <cheako+apt_repo@mikemestnik.net>
+  *  Uploaders: Debian IRC Team <pkg-irc-maintainers@lists.alioth.debian.org>
+  *  Watch file fixed thanks Tim Recout <tim@retout.co.uk> (Closes: #486583)
+  *  Watch file fixed again, new upstream location and needs to be 6.x LTSR.
+  *  Add gettext as a build-depends (> 3.0 needs for help files) 
+  *  Fix init script adds remote_fs depends.
+  *  Added logrotate for /var/log/atheme/*.log.
+  *  Removed /var/run/atheme from package.
+  *  Fix init script again not creates chmowns and chmods /var/run/atheme.
+  *  Fix init script again whitespace and usage.
+  *  Changed debhelper build-depends to (>= 7)
+  *  Ditch upstream make distclean.
+  *  Make use of dh-autoreconf when calling make all.
+  *  Updated copyright to reflect new download location and re-debianiziation.
+  *  Updated copyright to track upstream 2005-2007 becomes 2005-2010.
+  *  Used ./configure cross compile code from dh_make.
+  *  Removed LDFLAGS -z,defs, causing module callbacks to trip an error.
+  *  Updated ./configure folder definitions, no files should have been moved.
+  *  Used upstream NEWS as upstream changelog.
+  *  Included, this file, Debian changelog.
+  *  Croak if there are files built by the embedded libmowgli code.
+  *  If this croak is removed it might be possible to build the embedded code
+  *  Use 3.0 (quilt) source.
+  *  Clean up debian/rules depends, add build-arch/indep.
+  *  Added "Copyright " in debian/copyright to "(C) 2005 Trystan Scott Lee."
+  *  Added "Copyright " in debian/copyright to
+           "(C) 2007, William Pitcock <nenolod@sacredspiral.co.uk>"
+  *  Added Mike Mestnik under Debian packaging to debian/copyright.
+  *  Updated references to symlink license to reflect version-ed license.
+  *  Use dh_prep.
+  *  Use dpkg-buildflags, rather unsuccessfully.
+  *  Implemented status in init.
+  *  New standards version 3.9.3
+
+ -- Mike Mestnik <cheako+apt_repo@mikemestnik.net>  Sat, 17 Mar 2012 17:53:47 -0600
+
+atheme-services (3.0.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Add me to uploaders 
+
+ -- Matt Arnold <mattarnold5@gmail.com>  Tue, 08 Apr 2008 20:53:07 -0400
+
+atheme-services (3.0.3-1) unstable; urgency=low
+  
+  * New upstream release.
+ 
+ -- Darren Blaber <dmbtech@gmail.com>  Fri, 18 Jan 2008 21:41:39 -0500 
+
+atheme-services (2.2.0+hg20071209-1) experimental; urgency=low
+
+  * Initial release (Closes: #435881)
+
+ -- William Pitcock <nenolod@sacredspiral.co.uk>  Sun, 09 Dec 2007 13:12:21 -0600

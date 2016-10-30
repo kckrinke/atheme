@@ -1,0 +1,29 @@
+#! /bin/sh
+
+# atheme-services
+# Version:	atheme-services 2.2.0  06-08-07
+# Author:	Bradley Smith <brad@brad-smith.co.uk>
+
+set -e
+
+case "$1" in
+
+    configure)
+	    chown irc:irc /var/lib/atheme/
+	    chown irc:irc /var/log/atheme/
+	    chown root:irc /etc/atheme/
+	    chmod 770 /etc/atheme/
+	;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "ERROR: Postinst called with unknown argument!"
+        exit 0
+    ;;
+
+esac
+
+#DEBHELPER#
+
+exit 0

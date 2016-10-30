@@ -1,0 +1,11 @@
+atheme-serveices for Debian
+---------------------------
+
+To build this package, follow those steps:
+
+    uscan --download-current
+    git-buildpackage
+
+We use the "underlay" mechanism of git-buildpackage to build this.
+
+ -- Antoine Beaupré <anarcat@debian.org>, Mon,  7 Jul 2014 22:51:15 -0400
